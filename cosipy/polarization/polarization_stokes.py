@@ -766,8 +766,8 @@ class PolarizationStokes():
         except:
 
             for a in self._data_azimuthal_angles:
-                qs.append(stokes_q(a.value - np.pi/2))
-                us.append(stokes_u(a.value - np.pi/2))
+                qs.append(stokes_q(a.value - np.pi/2)[0])
+                us.append(stokes_u(a.value - np.pi/2)[0])
 
         if show_plots:
             plt.figure()
@@ -811,8 +811,8 @@ class PolarizationStokes():
             except:
 
                 for a in self._background_azimuthal_angles:
-                    qs.append(stokes_q(a.value - np.pi/2))
-                    us.append(stokes_u(a.value - np.pi/2))
+                    qs.append(stokes_q(a.value - np.pi/2)[0])
+                    us.append(stokes_u(a.value - np.pi/2)[0])
 
             if show_plots:
                 plt.figure()
